@@ -1,0 +1,6 @@
+模拟：DemoClient1向DemoClient2做TCP打洞
+
+先启动服务端
+再分别启动DemoClient2和DemoClient1注意顺序
+
+注意：讲代码中在ip替换掉
