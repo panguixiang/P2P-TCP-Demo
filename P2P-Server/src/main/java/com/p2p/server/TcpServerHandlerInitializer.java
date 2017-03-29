@@ -12,6 +12,9 @@ public class TcpServerHandlerInitializer extends ChannelInitializer<NioSocketCha
 	protected void initChannel(NioSocketChannel ch) throws Exception {
 
 		ChannelPipeline pipeline = ch.pipeline();
+		/**
+		 * 实际项目中药将此序列化方式改成FastJsonMsgEncoder和FastJsonMsgDecoder
+		 */
 		pipeline.addLast("encoder",new StringEncoder());
 		pipeline.addLast("decoder",new StringDecoder());
 		pipeline.addLast("handler",new TcpServerHanlder());
